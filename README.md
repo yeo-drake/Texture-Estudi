@@ -1,2 +1,9 @@
-# Texture-Estudi
-editor de paquetes de texturas de Minecraft bedrock
+# Texture Studio
+
+Editor de paquetes de texturas para Minecraft Bedrock.
+
+Funciones:
+- Editor de texturas
+- Conversor (estilo Bloxelizer)
+- HoloPrint
+- Fusión de paquetes
