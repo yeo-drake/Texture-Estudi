@@ -57,7 +57,7 @@ class EditorService {
     final fileName = name ??
         'edited_${DateTime.now().millisecondsSinceEpoch}.mcpack';
     final file = File('${dir.path}/$fileName');
-    await file.writeAsBytes(Uint8List.fromList(zipped));
+    await file.writeAsBytes(Uint8List.fromList(zipped!));
     return file;
   }
 }
