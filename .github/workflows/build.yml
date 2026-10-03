@@ -33,6 +33,18 @@ jobs:
           cp -r lib app/lib
           cp pubspec.yaml app/pubspec.yaml
 
+      - name: Ajustar compileSdk a 35
+        run: |
+          FILE=app/android/app/build.gradle
+          if [ -f "$FILE" ]; then
+            sed -i 's/compileSdkVersion [0-9]*/compileSdkVersion 35/' "$FILE"
+            sed -i 's/compileSdk [0-9]*/compileSdk 35/' "$FILE"
+          fi
+          FILE2=app/android/app/build.gradle.kts
+          if [ -f "$FILE2" ]; then
+            sed -i 's/compileSdk = [0-9]*/compileSdk = 35/' "$FILE2"
+          fi
+
       - name: Instalar dependencias
         run: cd app && flutter pub get
 
