@@ -107,7 +107,7 @@ class HoloPrintService {
     final outFile = File(
       '${tempDir.path}/holoprint_${DateTime.now().millisecondsSinceEpoch}.mcpack',
     );
-    await outFile.writeAsBytes(Uint8List.fromList(zipped));
+    await outFile.writeAsBytes(Uint8List.fromList(zipped!));
 
     return HoloPrintResult(
       outputFile: outFile,
