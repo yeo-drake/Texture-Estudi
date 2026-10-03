@@ -47,7 +47,7 @@ class MergerService {
     });
 
     final zipped = ZipEncoder().encode(outArchive);
-    final zippedBytes = Uint8List.fromList(zipped);
+    final zippedBytes = Uint8List.fromList(zipped!);
 
     final tempDir = await getTemporaryDirectory();
     final outFile = File('${tempDir.path}/$outputName.mcpack');
